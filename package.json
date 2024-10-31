@@ -1,0 +1,19 @@
+{
+  "name": "entrevista-tecnica",
+  "version": "1.0.0",
+  "description": "Ejercicios entrevista técnica",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goarguello97/entrevista-tecnica.git"
+  },
+  "author": "Gonzalo Argüello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goarguello97/entrevista-tecnica/issues"
+  },
+  "homepage": "https://github.com/goarguello97/entrevista-tecnica#readme"
+}
