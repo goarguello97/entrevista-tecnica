@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Ejercicios entrevista técnica",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "test"
   },
