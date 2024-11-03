@@ -7,9 +7,9 @@ const rl = createInterface({
 });
 
 class Operario {
-  constructor(sueldos = []) {
-    this.sueldos = sueldos;
+  #sueldos = [];
 
+  constructor() {
     this.#cargarSueldo();
   }
 
@@ -20,7 +20,7 @@ class Operario {
           console.log("Ingrese un número");
           this.#cargarSueldo(i);
         }
-        this.sueldos.push(parseFloat(sueldo));
+        this.#sueldos.push(parseFloat(sueldo));
         i++;
         this.#cargarSueldo(i);
       });
@@ -31,12 +31,12 @@ class Operario {
   }
 
   mostrarSueldos() {
-    if (this.sueldos.length === 0) {
+    if (this.#sueldos.length === 0) {
       console.log("No hay sueldos ingresados");
       return;
     }
-    for (let i = 0; i <= this.sueldos.length - 1; i++) {
-      console.log(`El sueldo del operario ${i + 1} es: ${this.sueldos[i]}`);
+    for (let i = 0; i <= this.#sueldos.length - 1; i++) {
+      console.log(`El sueldo del operario ${i + 1} es: ${this.#sueldos[i]}`);
     }
     return;
   }
