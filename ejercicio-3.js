@@ -1,41 +1,16 @@
-import { stdin, stdout } from "process";
-import { createInterface } from "readline";
-
-const rl = createInterface({
-  input: stdin,
-  output: stdout,
-});
-
 class Alumno {
   #nombre = null;
   #edad = null;
 
-  constructor() {
-    this.#cargarAlumno();
-  }
-
-  #cargarAlumno() {
-    this.#nombre &&
-      rl.question("Ingrese la edad: ", (edad) => {
-        isNaN(edad) && console.log("Error - Ingrese edad en numero: ");
-        typeof parseInt(edad) !== "number" &&
-          console.log("Error - Ingrese edad en numero: ");
-        this.#edad = edad;
-        rl.close();
-        this.imprimirDatos();
-      });
-
-    rl.question("Ingrese el nombre: ", (nombre) => {
-      this.#nombre = nombre;
-      this.#cargarAlumno();
-    });
+  constructor(nombre, edad) {
+    this.#nombre = nombre;
+    this.#edad = edad;
   }
 
   imprimirDatos() {
     console.log(
       `El nombre del alumno es ${this.#nombre} y su edad es de ${this.#edad}`
     );
-    this.mayoriaEdad();
   }
 
   mayoriaEdad() {
@@ -45,4 +20,11 @@ class Alumno {
   }
 }
 
-const alumno = new Alumno();
+const alumnoA = new Alumno("Fulanito", 17);
+
+const alumnoB = new Alumno("Menganito", 18);
+
+alumnoA.imprimirDatos();
+alumnoA.mayoriaEdad();
+alumnoB.imprimirDatos();
+alumnoB.mayoriaEdad();
