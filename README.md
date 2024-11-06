@@ -8,6 +8,7 @@ Este repositorio contiene varios ejercicios en archivos JavaScript. A continuaci
 - `ejercicio-2.js`
 - `ejercicio-3.js`
 - `ejercicio-4.js`
+- `ejercicio-5.sql`
 
 ## Instrucciones para ejecutar los ejercicios
 
@@ -21,3 +22,7 @@ Para ejecutar cualquiera de los archivos, sigue estos pasos:
    ```bash
    node ejercicio-1.js
    ```
+
+## Ejercicio de SQL
+
+El ejercicio-5.sql contiene una serie de consultas SQL diseñadas para demostrar conocimientos en bases de datos.
